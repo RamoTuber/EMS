@@ -1,0 +1,1522 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="email">
+  <head>
+    <title></title>
+    <meta charset="utf-8" http-equiv="Content-Type" />
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/global.min.css">
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.2/css/foundation.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- 
+    <link rel="stylesheet" type="text/css" href="angular-meditor-master/dist/demo.css">
+    <link rel="stylesheet" type="text/css" href="angular-meditor-master/dist/meditor.css"> -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+    <style type="text/css">
+        body {
+          font-family: 'Lato', sans-serif !important;
+        }
+
+        /*table {
+          border:1px dashed #5f5f5f;
+        }
+
+        tr {
+          border:1px dotted #b9b9b9;
+        }
+
+        td {
+          border:1px dotted #bfbfbf;
+        }*/
+
+        table {
+          font-family: 'Lato', sans-serif !important;
+          table-layout: fixed !important;
+        }
+
+        .icon {
+          font-family: 'Open Sans',Helvetica,Arial,sans-serif!important;
+          font-weight:700;
+          font-size:18px;
+          margin:8px;
+          color:#fff;
+          padding: 5px 12px;
+          border-radius: 50px;
+          cursor:pointer;
+        }
+
+        .fb {
+            background: #3b5998;
+        }
+
+        .fb:hover {
+            background:#203767;
+        }
+
+        .tw {
+          background:#1da1f2;
+        }
+
+        .tw:hover {
+          background:#097ec5;
+        }
+
+        .go {
+          background:#df554a;
+          font-size: 14px;
+          padding: 7px 6px;
+        }
+
+        .go:hover {
+          background:#bd2f24;
+        }
+
+        .in {
+          background:#007ab5;
+          font-size: 16px;
+          padding: 6.5px 8px;
+        }
+
+        .in:hover {
+          background:#005077
+        }
+
+        .btn-dark:hover {
+          background:#a73c46 !important;
+        }
+
+        .btn-light:hover {
+          background:#e6e6e6 !important;
+        }
+
+        .dark-link:hover span {
+          color: #a73c46 !important;
+        }
+
+        h2 {
+          margin: 0;
+        }
+        a.about font:hover, a.service font:hover, a.contact font:hover {
+          color: #000000 !important;
+        }
+
+        .top-links h2{
+          font-weight: 100 !important;
+          color: #555555;
+        }
+
+        .footer-link:hover {
+          text-decoration: underline !important;
+        }
+
+        .footer-link:hover span {
+          color:#404040 !important;
+        }
+
+        .facebook:hover font {
+          color:#3b5998;
+        }
+
+        .twitter:hover font {
+          color:#1da1f2;
+        }
+
+        .google:hover font {
+          color:#dd4d40;
+        }
+
+        .linkedin:hover font {
+          color:#007bb6;
+        }
+
+        .email-wrapper {
+          width:70%;
+          display: inline-block;
+        }
+
+        @media screen and (max-width:620px){
+          .thumb_wrapper {
+            width: 100%;
+            text-align: center;
+          }
+
+          .thumb_wrapper img {
+            width: 64% !important;
+          }
+
+          .main_wrapper {
+            width: 100%;
+          }
+
+          .letter_content, .action_content, .help_content, .credentials_content, .banner {
+            width:95% !important;
+          }
+
+          #banner {
+            width: 100%;
+          }
+
+          .CTA_btn {
+            width: 60%;
+          }
+
+          .payments {
+            width: 98% !important;
+          }
+
+          .btn-dark, .btn-dark-wrapper {
+            width: 212px !important;
+          }
+
+          .logo {
+            width: 150px;
+          }
+        }
+
+        @media screen and (max-width:430px){
+          .thumb_wrapper img {
+            width: 85% !important;
+          }
+
+          .CTA_btn {
+            width: 85%;
+          }
+        }
+
+        @media only screen and (max-width: 640px) {
+            .game {
+                border: none!important;
+                box-shadow: none!important;
+                padding-bottom: 20px;
+            }
+            .newgames {
+                background-color: #0089ff!important;
+            }
+            .deviceWidth {
+                width: 440px !important;
+                padding: 0;
+                background-color: #ffffff;
+            }
+
+            .deviceWidth.posterMobile {
+                width: 476px !important;
+            }
+
+            .hideForMobile {
+                display: none !important;
+            }
+            .removePaddingForMobile {
+                padding: 0 !important;
+            }
+            .navPaddingForMobile {
+                padding: 20px !important;
+            }
+            .titlePaddingForMobile {
+                padding: 15px 20px 0 20px !important;
+            }
+            .textPaddingForMobile {
+                padding: 15px 20px 15px 20px !important;
+            }
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+                width: 217px!important;
+            }
+            .icon {
+                padding-right: 10px!important;
+            }
+            .firstthreeGames {
+                padding-bottom: 0px!important;
+            }
+            .icon-mga,
+            .icon-gpwa,
+            .icon-18,
+            .icon-youtube,
+            .icon-facebook {
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #1e2022!important;
+            }
+            .icon-mga {
+                width: 74px!important;
+            }
+            icon-gpwa {
+                width: 96px!important;
+            }
+            .footerTextTitle {
+                padding-top: 30px!important;
+            }
+
+            .deviceWidth.socilaIcons {
+                width: 40px !important; 
+            }
+
+            .deviceWidth.licenses {
+                width: 74px !important;
+            }
+
+            .licenseText {
+                width: 283px !important;
+            }
+
+        }
+        
+        @media only screen and (max-width: 479px) {
+            .game {
+                border: none!important;
+                box-shadow: none!important;
+                padding-bottom: 20px;
+            }
+            .game img {
+                width: 250px!important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .newgames {
+                background-color: #0089ff!important;
+            }
+            ul,
+            ol {
+                padding-left: 20px
+            }
+            .deviceWidth {
+                width: 350px !important;
+                padding: 0;
+                background-color: #ffffff;
+            }
+            .deviceWidth.posterMobile {
+                width: 379px !important;
+            }
+            .hideForMobile {
+                display: none !important;
+            }
+            .removePaddingForMobile {
+                padding: 0 !important;
+            }
+            .navPaddingForMobile {
+                padding: 20px !important;
+            }
+            .titlePaddingForMobile {
+                padding: 15px 20px 0 20px !important;
+            }
+            .textPaddingForMobile {
+                padding: 15px 20px 15px 20px !important;
+            }
+            .greyBg {
+                background-color: #ffffff!important;
+            }
+            .button2outer,
+            .button2 {
+                width: 230px!important;
+            }
+            .icon {
+                padding-right: 10px!important;
+            }
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+                width: 150px!important;
+            }
+            .topText,
+            .heading,
+            .title {
+                text-align: left!important;
+            }
+            .icon-mga,
+            .icon-gpwa,
+            .icon-18,
+            .icon-youtube,
+            .icon-facebook {
+                margin-left: auto;
+                margin-right: auto;
+                background-color: #1e2022!important;
+            }
+            .icon-mga {
+                width: 74px!important;
+            }
+            icon-gpwa {
+                width: 96px!important;
+            }
+            .icon-18,
+            .icon-youtube,
+            .icon-facebook {
+                width: 40px;
+            }
+            .footerTextTitle {
+                padding-top: 30px!important;
+            }
+        }
+        
+        @media screen and (max-width: 800px) {
+            table[class="responsive-quote"] {
+                width: 100% !important;
+                height: auto !important;
+                margin: 8px 0 !important;
+                display: block !important;
+            }
+        }
+    </style>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/cms.js"></script>
+    <!-- <script type="text/javascript" src="angular-meditor-master/app/scripts/meditor.js"></script>-->
+
+  </head>
+
+  <!-- ng-app="meditorDemo" ng-controller="MainCtrl" -->
+  <body style="background: #f1f1f1;padding:0; margin:0;" ng-controller="AppController as vm">
+
+    <!-- prefeillers -->
+    <div class="pre_wrapper"  ng-controller="componentController as comp">
+      <span class="active_menu"></span>
+
+      <div class="text_symbols_wrapper">
+        <span class="txt_sym_link" title="text symbols"></span>
+
+        <h3>Text Symbols</h3>
+        <div class="symbols">
+          <span title="text symbols"></span>
+
+          <div class="symbol_class">
+            <h4>Miscellaneuos</h4>
+            <span>❤</span>
+            <span>💔</span>
+            <span>💣</span>
+            <span>💥</span>
+            <span>💦</span>
+            <span>💬</span>
+            <span>🗯</span>
+            <span>👓</span>
+            <span>🕶</span>
+            <span>👕</span>
+            <span>👗</span>
+            <span>👖</span>
+            <span>👞</span>
+            <span>👢</span>
+            <span>💍</span>
+            <span>💎</span>
+            <span>🦄</span>
+            <span>🌲</span>
+            <span>☘</span>
+            <span>🍀</span>
+            <span>🍂</span>
+            <span>🍃</span>
+            <span>🍇</span>
+            <span>🍈</span>
+            <span>🍉</span>
+            <span>🍊</span>
+            <span>🍋</span>
+            <span>🍌</span>
+            <span>🍍</span>
+            <span>🍎</span>
+            <span>🍏</span>
+            <span>🍐</span>
+            <span>🍑</span>
+            <span>🍒</span>
+            <span>🍓</span>
+            <span>🍅</span>
+            <span>🍆</span>
+            <span>🌽</span>
+            <span>🌶</span>
+            <span>🍄</span>
+            <span>🌰</span>
+            <span>🧀</span>
+            <span>🍖</span>
+            <span>🍗</span>
+            <span>🍟</span>
+            <span>🍕</span>
+            <span>🌮</span>
+            <span>🍙</span>
+            <span>🍚</span>
+            <span>🍣</span>
+            <span>🍭</span>
+            <span>🍹</span>
+            <span>🌙</span>
+            <span>☀</span>
+            <span>🌝</span>
+            <span>🌈</span>
+            <span>🎁</span>
+            <span>🎖</span>
+            <span>🏆</span>
+            <span>⚽</span>
+            <span>⚾</span>
+            <span>🏈</span>
+            <span>🎱</span>
+            <span>♠</span>
+            <span>♥</span>
+            <span>♦</span>
+            <span>♣</span>
+            <span>🔔</span>
+            <span>🔍</span>
+            <span>💳</span>
+            <span>🗝</span>
+            <span>🔫</span>
+          </div>
+
+          <div class="symbol_class">
+            <h4>Signs</h4>
+            <span>▲</span>
+            <span>◄</span>
+            <span>►</span>
+            <span>▶</span>
+            <span>◀</span>
+            <span>◣</span>
+            <span>◢</span>
+            <span>◥</span>
+            <span>◤</span>
+            <span>◂</span>
+            <span>▴</span>
+            <span>▾</span>
+            <span>△</span>
+            <span>▷</span>
+            <span>◁</span>
+            <span>⊿</span>
+            <span>▻</span>
+            <span>◅</span>
+            <span>▵</span>
+            <span>▿</span>
+            <span>◃</span>
+            <span>◯</span>
+            <span>☉</span>
+            <span>◌</span>
+            <span>◍</span>
+            <span>◐</span>
+            <span>◑</span>
+            <span>◒</span>
+            <span>◓</span>
+            <span>◔</span>
+            <span>◕</span>
+            <span>◖</span>
+            <span>◗</span>
+            <span>❂</span>
+            <span>☢</span>
+            <span>⊗</span>
+            <span>⊙</span>
+            <span>◘</span>
+            <span>🔺</span>
+            <span>🔻</span>
+            <span>◉</span>
+            <span>◎</span>
+            <span>●</span>
+            <span>○</span>
+            <span>■</span>
+            <span>□</span>
+            <span>▼</span>
+            <span>▽</span>
+            <span>▸</span>
+            <span>▹</span>
+            <span>◼</span>
+            <span>◻</span>
+            <span>◾</span>
+            <span>◽</span>
+            <span>▪</span>
+            <span>▫</span>
+            <span>🔲</span>
+            <span>🔳</span>
+            <span>⚫</span>
+            <span>⚪</span>
+            <span>🔴</span>
+            <span>🔵</span>
+            <span>🔸</span>
+            <span>🔹</span>
+            <span>✖</span>
+            <span>✕</span>
+            <span>〈</span>
+            <span>《</span>
+            <span>》</span>
+            <span>‹</span>
+            <span>›</span>
+            <span>«</span>
+            <span>»</span>
+          </div>
+
+          <div class="symbol_class">
+            <h4 id="emoji_link_title">More Text Symbols</h4>
+            <a id="emoji_link" href="https://www.google.com.mt/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=emoji+text+symbols&*" target="_blank">Click here for more text symbols</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="title">
+        <span class="menu-title">Saved Components</span>
+        <span class="small-subtitle">Reused components such as footer licenses and support can be found here by language.</span>
+      </div>
+
+      <div class="support">
+        <h2 class="components_title">Support</h2>
+        <div class="filled-component" id="Z" ng-click="appendComp('Z')">
+          <span>Support</span>
+          <span class="lang">DE</span>
+        </div>
+        <div class="filled-component" id="Y" ng-click="appendComp('Y')">
+          <span>Support</span>
+          <span class="lang">SE</span>
+        </div>
+        <div class="filled-component" id="X" ng-click="appendComp('X')">
+          <span>Support</span>
+          <span class="lang">EN</span>
+        </div>
+        <div class="filled-component">
+          <span>Support</span>
+          <span class="lang">FIN</span>
+        </div>
+      </div>
+
+      <div class="regulations">
+        <h2 class="components_title">Regulations</h2>
+        <div class="filled-component">
+          <span>Reg </span>
+          <span class="lang">DE</span>
+        </div>
+        <div class="filled-component">
+          <span>Reg </span>
+          <span class="lang">SE</span>
+        </div>
+        <div class="filled-component">
+          <span>Reg </span>
+          <span class="lang">EN</span>
+        </div>
+        <div class="filled-component">
+          <span>Reg </span>
+          <span class="lang">FIN</span>
+        </div>
+      </div>
+
+      <div class="social">
+        <h2 class="components_title">Social</h2>
+        <div class="filled-component" id="W" ng-click="appendComp('W')">
+          <span>All Social Links</span>
+        </div>
+      </div>
+
+      <div class="footers">
+        <h2 class="components_title">Footers</h2>
+        <div class="filled-component">
+          <span>Footer</span>
+          <span class="lang">DE</span>
+        </div>
+        <div class="filled-component">
+          <span>Footer</span>
+          <span class="lang">SE</span>
+        </div>
+        <div class="filled-component">
+          <span>Footer</span>
+          <span class="lang">EN</span>
+        </div>
+        <div class="filled-component">
+          <span>Footer</span>
+          <span class="lang">FIN</span>
+        </div>
+      </div>
+
+    </div>
+    <!-- end prefillers -->
+
+    <div class="alert_copy">COPIED TO CLIPBOARD <small> (USE CTRL+V TO PASTE)</small></div>
+
+    <div class="editor-wrapper" ng-controller="componentController as comp">
+      <div class="editor">
+        <header>
+          <h2 class="test">Email Editor (EMS)</h2>
+        </header>
+
+        <div class="components">
+
+          <!-- TEMPLATE 1 -->
+          <div class="ds-comps modern-design" id="ds-1">
+            <h4>Select Components</h4>
+
+            <div class="header up-case thumb" id="A" ng-click="appendComp('A')">
+              <span class="isSelected">0</span>
+                header
+              <span class="comp_id"></span>
+            </div>
+
+            <div class="comp-thumbs">
+              <div class="thumb" id="{{thumb.id}}" ng-repeat="thumb in comp.component">
+                <span class="isSelected">0</span>
+                <img id="{{thumb.id}}" ng-src='{{thumb.src}}' ng-click='appendComp(thumb.id)'>
+              </div>
+            </div>
+
+            <div class="footer up-case thumb" id="U" ng-click="appendComp('U')">
+              <span class="isSelected">0</span>
+              footer
+              <span class="comp_id footer-id"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDITOR FORMS -->
+        <div class="form-wrapper">
+          <!--Ajax load of the form mapped to the clicked component-->
+          <div class="form" id="formA">
+            <h4>CP-A1 Enter Your Message</h4>
+            <form>             
+              <input type="text" name="title" placeholder="Link Left Content" ng-model="vm.content1A">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="srcA1">
+
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA9">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA9">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA8">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA8">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA7">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA7">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA6">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA6">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA5">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA5">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA4">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA4">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA3">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA3">
+              <input type="text" name="link" placeholder="Link Content" ng-model="contentA2">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="SourceA2">  
+            </form>
+          </div>
+
+          <div class="form" id="formB">
+            <h4>CP-A2 Enter Your Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.content1B">
+
+              <input type="text" name="link" placeholder="Link Content" ng-model="link1Content">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="link1Src">
+
+              <input type="text" name="link" placeholder="Link Content" ng-model="link2Content">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="link2Src">
+
+              <input type="text" name="link" placeholder="Link Content" ng-model="link3Content">
+              <input id="img-link" type="text" name="source" placeholder="Source" ng-model="link3Src">
+            </form>
+          </div>
+
+          <div class="form" id="formC">
+            <h4>CP-A3 Enter Your Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.contentC1">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-1" name="link">
+                <span class="add_col" id="1"></span>
+
+                <input class="text-link" type="text" id="text_link-1" name="link">
+                <span class="add_link" id="1"></span>
+
+                <span class="add_pre" id="1"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.contentC2" id="editor-1"></textarea>
+
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="component.imgSrc">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="component.imgLink">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button ng-click="addSolid=true">SOLID CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addSolid" ng-model="component.btnSolidContent">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addSolid" ng-model="component.btnSolidLink">
+                </div>
+
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty" ng-model="component.btnEmptyContent">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty" ng-model="component.btnEmptyLink">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formD">
+            <h4>CP-A4 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp2TitleDark">
+              <input type="text" name="subtitle" placeholder="Subtitle" ng-model="component.cp2SubtitleLight">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-2" name="link">
+                <span class="add_col" id="2"></span>
+
+                <input class="text-link" type="text" id="text_link-2" name="link">
+                <span class="add_link" id="2"></span>
+
+                <span class="add_pre" id="2"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content2" id="editor-2"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="component.imgSrc2">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="component.imgLink2">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty2a=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty2a" ng-model="component.btnEmptyContent2a">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty2a" ng-model="component.btnEmptyLink2a">
+                </div>
+
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty2b=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty2b" ng-model="component.btnEmptyContent2b">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty2b" ng-model="component.btnEmptyLink2b">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formE">
+            <h4>CP-A5 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title" ng-model="vm.contentE1">
+              <input type="text" name="subtitle" placeholder="Subtitle" ng-model="cp3SubtitleLight">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-3" name="link">
+                <span class="add_col" id="3"></span>
+
+                <input class="text-link" type="text" id="text_link-3" name="link">
+                <span class="add_link" id="3"></span>
+
+                <span class="add_pre" id="3"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content3" id="editor-3"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc3">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink3">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty3a=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty3a" ng-model="btnEmptyContent3a">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty3a" ng-model="btnEmptyLink3a">
+                </div>
+
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty3b=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty3b" ng-model="btnEmptyContent3b">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty3b" ng-model="btnEmptyLink3b">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formF">
+            <h4>CP-A6 Enter Message</h4>
+            <form>
+              <h2>Left Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp4TitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-4" name="link">
+                <span class="add_col" id="4"></span>
+
+                <input class="text-link" type="text" id="text_link-4" name="link">
+                <span class="add_link" id="4"></span>
+
+                <span class="add_pre" id="4"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content4" id="editor-4"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc4">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink4">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button ng-click="addSolid4a=true">SOLID CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addSolid4a" ng-model="btnSolidContent4a">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addSolid4a" ng-model="btnSolidLink4a">
+                </div>
+              </div>
+            </form>
+
+            <form>
+              <h2>Right Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp4bTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-5" name="link">
+                <span class="add_col" id="5"></span>
+
+                <input class="text-link" type="text" id="text_link-5" name="link">
+                <span class="add_link" id="5"></span>
+
+                <span class="add_pre" id="5"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content4b" id="editor-5"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc4b">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink4b">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button ng-click="addSolid4b=true">SOLID CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addSolid4b" ng-model="btnSolidContent4b">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addSolid4a" ng-model="btnSolidLink4b">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formG">
+            <h4>CP-A7 Enter Message</h4>
+            <form>
+              <h2>Left Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.title5a">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-6" name="link">
+                <span class="add_col" id="6"></span>
+
+                <input class="text-link" type="text" id="text_link-6" name="link">
+                <span class="add_link" id="6"></span>
+
+                <span class="add_pre" id="6"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content5a"></textarea>
+
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc5a">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink5a">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button ng-click="addSolid5a=true">SOLID CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addSolid5a" ng-model="btnSolidContent5a">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addSolid5a" ng-model="btnSolidLink5a">
+                </div>
+              </div>
+            </form>
+
+            <form>
+              <h2>Center Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.title5b">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-7" name="link">
+                <span class="add_col" id="7"></span>
+
+                <input class="text-link" type="text" id="text_link-7" name="link">
+                <span class="add_link" id="7"></span>
+
+                <span class="add_pre" id="7"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content5b" id="editor-7"></textarea>
+
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc5b">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink5b">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button ng-click="addSolid5b=true">SOLID CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addSolid5b" ng-model="btnSolidContent5b">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addSolid5b" ng-model="btnSolidLink5b">
+                </div>
+              </div>
+            </form>
+
+            <form>
+              <h2>Right Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.title5c">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-8" name="link">
+                <span class="add_col" id="8"></span>
+
+                <input class="text-link" type="text" id="text_link-8" name="link">
+                <span class="add_link" id="8"></span>
+
+                <span class="add_pre" id="8"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content5c" id="editor-8"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc5c">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink5c">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button ng-click="addSolid5c=true">SOLID CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addSolid5c" ng-model="btnSolidContent5c">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addSolid5c" ng-model="btnSolidLink5c">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formH">
+            <h4>CP-A8 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp6TitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-9" name="link">
+                <span class="add_col" id="9"></span>
+
+                <input class="text-link" type="text" id="text_link-9" name="link">
+                <span class="add_link" id="9"></span>
+
+                <span class="add_pre" id="9"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content6" id="editor-9"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc6">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink6">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty6=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty6" ng-model="btnEmptyContent6">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty6" ng-model="btnEmptyLink6">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formI">
+            <h4>CP-A9 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp7TitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-10" name="link">
+                <span class="add_col" id="10"></span>
+
+                <input class="text-link" type="text" id="text_link-10" name="link">
+                <span class="add_link" id="10"></span>
+
+                <span class="add_pre" id="10"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content7" id="editor-10"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc7">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink7">
+              </div>
+
+              <div class="CTAs">
+                <div class="cta">
+                  <button id="emptyBtn" ng-click="addEmpty7=true">Empty CTA</button>
+                  <input id="CTA" type="text" name="content" placeholder="CTA content" ng-show="addEmpty7" ng-model="btnEmptyContent7">
+                  <input id="CTA" type="text" name="link" placeholder="Link" ng-show="addEmpty7" ng-model="btnEmptyLink7">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formJ">
+            <h4>CP-B1 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.titleJ1">
+              <input type="text" name="title" placeholder="Right Side Text" ng-model="cp8text">
+            </form>
+          </div>
+
+          <div class="form" id="formK">
+            <h4>CP-B2 Enter Message</h4>
+            <form>
+              <h2>Left Column</h2>
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-11" name="link">
+                <span class="add_col" id="11"></span>
+
+                <input class="text-link" type="text" id="text_link-11" name="link">
+                <span class="add_link" id="11"></span>
+
+                <span class="add_pre" id="11"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content9a" id="editor-11"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc9a">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink9a">
+              </div>
+            </form>
+
+            <form>
+              <h2>Center1 Column</h2>
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-12" name="link">
+                <span class="add_col" id="12"></span>
+
+                <input class="text-link" type="text" id="text_link-12" name="link">
+                <span class="add_link" id="12"></span>
+
+                <span class="add_pre" id="12"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content9b" id="editor-12"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc9b">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink9b">
+              </div>
+            </form>
+
+            <form>
+              <h2>Center2 Column</h2>
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-13" name="link">
+                <span class="add_col" id="13"></span>
+
+                <input class="text-link" type="text" id="text_link-13" name="link">
+                <span class="add_link" id="13"></span>
+
+                <span class="add_pre" id="13"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content9c" id="editor-13"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc9c">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink9c">
+              </div>
+            </form>
+
+            <form>
+              <h2>Right Column</h2>
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-14" name="link">
+                <span class="add_col" id="14"></span>
+
+                <input class="text-link" type="text" id="text_link-14" name="link">
+                <span class="add_link" id="14"></span>
+
+                <span class="add_pre" id="14"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content9d" id="editor-14"></textarea>
+              <div class="img">
+                <div class="image-source">
+                  <span class="image-icon"></span>
+                  <input id="img-src-input" type="text" name="imagelink" ng-model="imgSrc9d">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="imgLink9d">
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formL">
+            <h4>CP-B3 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Icon Link" ng-model="iconSrc10">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp10TitleDark">
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-15" name="link">
+                <span class="add_col" id="15"></span>
+
+                <input class="text-link" type="text" id="text_link-15" name="link">
+                <span class="add_link" id="15"></span>
+
+                <span class="add_pre" id="15"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content10" id="editor-15"></textarea>
+
+              <div class="img">
+                <div class="image-source">
+                  <input id="img-src-input" type="text" name="imagelink" placeholder="anchor link" ng-model="linkContent10">
+                </div>
+                <input id="img-link" type="text" name="imgLink" placeholder="link" ng-model="link10">
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formM">
+            <h4>CP-B4 Enter Message</h4>
+            <form>
+              <input type="text" name="sidetext" placeholder="Title" ng-model="cp11TitleDark">
+              <input type="text" name="title" placeholder="Side Text Top" ng-model="sideTextTop">
+              <input type="text" name="title" placeholder="Side Text Bottom" ng-model="sideTextbottom">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-16" name="link">
+                <span class="add_col" id="16"></span>
+
+                <input class="text-link" type="text" id="text_link-16" name="link">
+                <span class="add_link" id="16"></span>
+
+                <span class="add_pre" id="16"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content11" id="editor-16"></textarea>
+
+              <div class="img">
+                <div class="image-source">
+                  <input id="img-src-input" type="text" name="link" placeholder="anchor link" ng-model="linkContent11">
+                </div>
+                <input id="img-link" type="text" name="Link" placeholder="link" ng-model="link11">
+              </div>
+            </form>
+          </div>
+
+          <div class="form" id="formN">
+            <h4>CP-B5 Enter Message</h4>
+            <form>
+              <h2>Left Column</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc12a">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp12aTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-17" name="link">
+                <span class="add_col" id="17"></span>
+
+                <input class="text-link" type="text" id="text_link-17" name="link">
+                <span class="add_link" id="17"></span>
+
+                <span class="add_pre" id="17"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content12a" id="editor-17"></textarea>
+            </form>
+
+            <form>
+              <h2>Right Column</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc12b">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp12bTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-18" name="link">
+                <span class="add_col" id="18"></span>
+
+                <input class="text-link" type="text" id="text_link-18" name="link">
+                <span class="add_link" id="18"></span>
+
+                <span class="add_pre" id="18"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content12b" id="editor-18"></textarea>
+            </form>
+          </div>
+
+          <div class="form" id="formO">
+            <h4>CP-B6 Enter Message</h4>
+            <form>
+              <h2>Left Column</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc13a">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp13aTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-19" name="link">
+                <span class="add_col" id="19"></span>
+
+                <input class="text-link" type="text" id="text_link-19" name="link">
+                <span class="add_link" id="19"></span>
+
+                <span class="add_pre" id="19"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content13a" id="editor-19"></textarea>
+            </form>
+
+            <form>
+              <h2>Center Column</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc13b">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp13bTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-20" name="link">
+                <span class="add_col" id="20"></span>
+
+                <input class="text-link" type="text" id="text_link-20" name="link">
+                <span class="add_link" id="20"></span>
+
+                <span class="add_pre" id="20"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content13b" id="editor-20"></textarea>
+            </form>
+
+            <form>
+              <h2>Right Column</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc13c">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp13cTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-21" name="link">
+                <span class="add_col" id="21"></span>
+
+                <input class="text-link" type="text" id="text_link-21" name="link">
+                <span class="add_link" id="21"></span>
+
+                <span class="add_pre" id="21"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content13c" id="editor-21"></textarea>
+            </form>
+          </div>
+
+          <div class="form" id="formP">
+            <h4>CP-B7 Enter Message</h4>
+            <form>
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-22" name="link">
+                <span class="add_col" id="22"></span>
+
+                <input class="text-link" type="text" id="text_link-22" name="link">
+                <span class="add_link" id="22"></span>
+
+                <span class="add_pre" id="22"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content14" id="editor-22"></textarea>
+            </form>
+          </div>
+
+          <div class="form" id="formQ">
+            <h4>CP-B8 Enter Message</h4>
+            <form>
+              <h2>Row 1</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc15a">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp15aTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-23" name="link">
+                <span class="add_col" id="23"></span>
+
+                <input class="text-link" type="text" id="text_link-23" name="link">
+                <span class="add_link" id="23"></span>
+
+                <span class="add_pre" id="23"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content15a" id="editor-23"></textarea>
+            </form>
+
+            <form>
+              <h2>Row 2</h2>
+              <input type="text" name="icon" placeholder="Icon Link" ng-model="iconSrc15b">
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp15bTitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-24" name="link">
+                <span class="add_col" id="24"></span>
+
+                <input class="text-link" type="text" id="text_link-24" name="link">
+                <span class="add_link" id="24"></span>
+
+                <span class="add_pre" id="24"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content15b" id="editor-24"></textarea>
+            </form>
+          </div>
+
+          <div class="form" id="formR">
+            <h4>CP-B9 Enter Message</h4>
+            <form>
+              <h2>Left Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.content16a">
+
+              <input type="text" name="link" placeholder="Link 1" ng-model="cp16aLink1">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link1Src6a">
+              <input type="text" name="link" placeholder="Link 2" ng-model="cp16aLink2">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link2Src6a">
+              <input type="text" name="link" placeholder="Link 3" ng-model="cp16aLink3">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link3Src6a">
+              <input type="text" name="link" placeholder="Link 5" ng-model="cp16aLink4">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link4Src6a">
+            </form>
+
+            <form>
+              <h2>Center Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="vm.content16b">
+
+              <input type="text" name="link" placeholder="Link 1" ng-model="cp16bLink1">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link1Src6b">
+              <input type="text" name="link" placeholder="Link 2" ng-model="cp16bLink2">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link2Src6b">
+              <input type="text" name="link" placeholder="Link 3" ng-model="cp16bLink3">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link3Src6b">
+              <input type="text" name="link" placeholder="Link 4" ng-model="cp16bLink4">
+              <input id="img-link" type="text" name="imgLink" placeholder="image link" ng-model="link4Src6b">
+            </form>
+
+            <form>
+              <h2>Right Column</h2>
+              <input type="text" name="title" placeholder="Title Dark" ng-model="cp16TitleDark">
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-25" name="link">
+                <span class="add_col" id="25"></span>
+
+                <input class="text-link" type="text" id="text_link-25" name="link">
+                <span class="add_link" id="25"></span>
+
+                <span class="add_pre" id="25"></span>
+              </div>
+              <textarea placeholder="Message..." ng-model="vm.content16c" id="editor-25"></textarea>
+            </form>
+          </div>
+
+          <div class="form" id="formS">
+            <h4>CP-C1 Enter Message</h4>
+            <form>
+              <input type="text" name="link" placeholder="facebook" ng-model="cp17Link1">
+              <input id="img-link" type="text" name="imgLink" placeholder="facebook link" ng-model="cp17Src1">
+
+              <input type="text" name="link" placeholder="twitter" ng-model="cp17Link2">
+              <input id="img-link" type="text" name="imgLink" placeholder="twitter link" ng-model="cp17Src2">
+
+              <input type="text" name="link" placeholder="Google+" ng-model="cp17Link3">
+              <input id="img-link" type="text" name="imgLink" placeholder="google+ link" ng-model="cp17Src3">
+
+              <input type="text" name="link" placeholder="RSS" ng-model="cp17Link4">
+              <input id="img-link" type="text" name="imgLink" placeholder="RSS link" ng-model="cp17Src4">
+
+              <input type="text" name="link" placeholder="Pinterest" ng-model="cp17Link5">
+              <input id="img-link" type="text" name="imgLink" placeholder="Pinterest link" ng-model="cp17Src5">
+
+              <input type="text" name="link" placeholder="LinkedIn" ng-model="cp17Link6">
+              <input id="img-link" type="text" name="imgLink" placeholder="LinkedIn link" ng-model="cp17Src6">
+            </form>
+          </div>
+
+          <div class="form" id="formT">
+            <h4>CP-C2 Enter Message</h4>
+            <form>
+              <input type="text" name="title" placeholder="Title" ng-model="vm.content18">
+
+              <input id="link" type="text" name="Link" placeholder="link" ng-model="cp18Link1">
+              <input id="img-link" type="text" name="source" placeholder="link" ng-model="Link18a">
+              <input id="link" type="text" name="Link" placeholder="link" ng-model="cp18Link2">
+              <input id="img-link" type="text" name="source" placeholder="link" ng-model="Link18b">
+            </form>
+          </div>
+
+          <div class="form" id="formU">
+            <h4>CP-C3 Enter Your Message</h4>
+            <form>
+
+              <div class="controls">
+                <input class="col-hex" type="text" id="col-pal-26" name="link">
+                <span class="add_col" id="26"></span>
+
+                <input class="text-link" type="text" id="text_link-26" name="link">
+                <span class="add_link" id="26"></span>
+
+                <span class="add_pre" id="26"></span>
+              </div>
+              <textarea placeholder="Credentials..." ng-model="vm.content1U" id="editor-26"></textarea>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- MARKUP GENERATOR -->
+      <div class="btn-wrapper">
+        <span></span>
+        <div class="btn btn-gen">
+            GENERATE MARKUP
+        </div>
+
+        <div class="btn btn-preview">
+            PREVIEW EMAIL
+        </div>
+      </div>
+    </div>
+
+    <div class="email-wrapper">
+
+      <!-- HOME PAGE TEMPLATES -->
+      <div class="home-page">
+        <div class="content">
+          <img class="test" src="./assets/imgs/logo.png" alt="Email Management System" title="Email Management System">
+          <h3>EEL<sup style="font-weight: 100">&reg;</sup> Email Template Management Portal</h3>
+          <p>Choose your template below</p>
+          <!-- Quasar Templates -->
+          <div class="quasTemp">
+            Templates
+          </div>
+          <div class="templates">
+            <div class="ds-temp" id="temp-1"><img src="assets/cm-editor/templates/modern-design.jpg"></div>
+            <div class="ds-temp" id="temp-1"><img src="assets/cm-editor/templates/quasar1.jpg"></div>
+            <div class="ds-temp" id="temp-1"><img src="assets/cm-editor/templates/quasar2.jpg"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DARK BOX PAGE DEACTIVATOR -->
+      <div class="disable-page"></div>
+
+      <!-- RAW HTML PANEL -->
+      <div class="raw-html">
+        <span class="close"></span>
+        <div class="controls">
+          <span id="clean">CLEAN CODE</span>
+          <span id="copy">COPY ALL</span>
+        </div>
+
+        <!-- CODE IS GENERATED IN THIS PARENT --> 
+        <div id="code" class="code" contenteditable='true'>
+          
+        </div>
+      </div>
+
+      <div class="instructor-1">
+        <span>Start by selecting the components that you want to add in your mailer from this side panel</span>
+      </div>
+
+      <div class="email-extract">
+        <!-- Top Menu Bar | SECTION A-->
+        <div class="section-wrapper" id="sectionA"></div>
+
+        <!-- main content wrapper -->
+        <table align="center" width="600" class="template" cellspacing="0" cellpadding="0" style="margin-left:auto; margin-right:auto; table-layout:fixed; cursive;">
+          <tbody>
+            <tr class="top-links">
+              <td>
+                <!-- SECTION B -->
+                <div class="section-wrapper" id="sectionB"></div>
+              </td>
+            </tr>
+
+            <tr class="main_content">
+              <td id="email-template"></td>
+            </tr>
+
+            <tr>
+              <!-- FOOTER 1 2 COLUMN -->
+              <td style="padding-bottom: 10px;">
+                <!-- SECTION T -->
+                <div class="section-wrapper" id="sectionT"></div>
+
+        <!-- FOOTER BAR -->
+        <div class="section-wrapper" id="sectionU"></div>
+      </div> <!-- end .email-extract -->
+    </div>
+
+  </body>
+</html>

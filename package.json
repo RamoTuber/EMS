@@ -1,0 +1,15 @@
+{
+  "name": "cmd-editor",
+  "version": "1.0.0",
+  "description": "email design editor",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omar Abela : EEL",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

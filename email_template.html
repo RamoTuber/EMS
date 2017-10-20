@@ -1,0 +1,2396 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="email">
+  <head>
+    <meta charset="utf-8" http-equiv="Content-Type" />
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+          font-family: 'Lato', sans-serif !important;
+        }
+
+        /*table {
+          border:1px dashed #5f5f5f;
+        }
+
+        tr {
+          border:1px dotted #b9b9b9;
+        }
+
+        td {
+          border:1px dotted #bfbfbf;
+        }*/
+
+        table {
+          font-family: 'Lato', sans-serif !important;
+          table-layout: fixed !important;
+        }
+
+        .icon {
+          font-family: 'Open Sans',Helvetica,Arial,sans-serif!important;
+          font-weight:700;
+          font-size:18px;
+          margin:8px;
+          color:#fff;
+          padding: 5px 12px;
+          border-radius: 50px;
+          cursor:pointer;
+        }
+
+        .fb {
+            background: #3b5998;
+        }
+
+        .fb:hover {
+            background:#203767;
+        }
+
+        .tw {
+          background:#1da1f2;
+        }
+
+        .tw:hover {
+          background:#097ec5;
+        }
+
+        .go {
+          background:#df554a;
+          font-size: 14px;
+          padding: 7px 6px;
+        }
+
+        .go:hover {
+          background:#bd2f24;
+        }
+
+        .in {
+          background:#007ab5;
+          font-size: 16px;
+          padding: 6.5px 8px;
+        }
+
+        .in:hover {
+          background:#005077
+        }
+
+        .btn-dark:hover {
+          background:#a73c46 !important;
+        }
+
+        .btn-light:hover {
+          background:#e6e6e6 !important;
+        }
+
+        .dark-link:hover span {
+          color: #a73c46 !important;
+        }
+
+        h2 {
+          margin: 0;
+        }
+        a.about font:hover, a.service font:hover, a.contact font:hover {
+          color: #000000 !important;
+        }
+
+        .top-links h2{
+          font-weight: 100 !important;
+          color: #555555;
+        }
+
+        .footer-link:hover {
+          text-decoration: underline !important;
+        }
+
+        .footer-link:hover span {
+          color:#404040 !important;
+        }
+
+        .facebook:hover font {
+          color:#3b5998;
+        }
+
+        .twitter:hover font {
+          color:#1da1f2;
+        }
+
+        .google:hover font {
+          color:#dd4d40;
+        }
+
+        .linkedin:hover font {
+          color:#007bb6;
+        }
+    </style>
+    <title></title>
+  </head>
+  <body style="background: #ecebeb;padding:0; margin:0;">
+
+    <!-- Top Menu Bar | SECTION A-->
+    <table border="0" cellspacing="0" class="menu-bar" style="border-collapse:collapse;width:100%; color:#fff;background-color: #d05d68;" width="100%">
+      <tbody>
+        <tr>
+          <td style="padding-top:14px; padding-bottom: 14px;">
+            <table border="0" cellspacing="0" class="menu-content" width="600" align="center" style="border-collapse:collapse;margin-left:auto; margin-right:auto">
+              <tbody>
+                <tr>
+                  <td>
+                    <table border="0" cellspacing="0" class="browser_link" style="border-collapse:collapse;float:left; width:190px;">
+                      <tbody>
+                        <tr>
+                          <td style="font-size:12px;">
+                            <font color="#ffffff">
+                              VIEW ONLINE
+                              <span style="padding-left: 5px; font-size:11px;">▶</span>
+                            </font>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table border="0" cellspacing="0" class="social-links" style="border-collapse:collapse;width:175px; float:right; text-align:right;">
+                      <tbody>
+                        <tr>
+                          <td align="center">
+                            <span class="facebook" title="facebook" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:900; cursor:pointer;">
+                              <font face="Helvetica, Arial,sans-serif;" color="#ffffff">f</font>
+                            </span>
+                          </td>
+
+                          <td align="center">
+                            <span class="twitter" title="twitter" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:700; cursor:pointer;">
+                              <font face="Helvetica, Arial,sans-serif;" color="#ffffff">t</font>
+                            </span>
+                          </td>
+
+                          <td align="center">
+                            <span class="google" title="google plus" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:400; cursor:pointer;">
+                              <font face="Helvetica, Arial,sans-serif;" color="#ffffff">G+</font>
+                            </span>
+                          </td>
+
+                          <td align="center">
+                            <span class="linkedin" title="Linkedin" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:900; cursor:pointer;">
+                              <font face="Helvetica, Arial,sans-serif;" color="#ffffff">in</font>
+                            </span>
+                          </td>
+
+
+                          <!-- <td>
+                          <span aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:900;">
+                          <font face="Helvetica, Arial,sans-serif;" color="#ffffff">f</font>
+                          </span>
+
+                         </td>
+
+                         <td>
+                          <span aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:900;">
+                            <font face="Helvetica, Arial,sans-serif;" color="#ffffff">t</font>
+                          </span>
+                         </td>
+
+                         <td>
+                          <span aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:100;">
+                            <font face="Helvetica, Arial,sans-serif;" color="#ffffff">G+</font>
+                          </span>
+                         </td>
+
+                         <td>
+                           <i class="fa fa-rss" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 14px;"></i>
+                         </td>
+
+                         <td>
+                           <i class="fa fa-pinterest-p" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 14px;"></i>
+                         </td>
+
+                         <td>
+                          <span aria-hidden="true" style="text-align: center;padding: 10px;font-size: 16px; font-weight:900;">
+                            <font face="Helvetica, Arial,sans-serif;" color="#ffffff">in</font>
+                          </span>
+                         </td>
+
+                         <td>
+                           <i class="fa fa-instagram" aria-hidden="true" style="text-align: center;padding: 10px;font-size: 14px;"></i>
+                         </td> -->
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- main content wrapper -->
+    <table align="center" width="600" class="template" cellspacing="0" cellpadding="0" style="margin-left:auto; margin-right:auto; table-layout:fixed; cursive;">
+      <tbody>
+
+        <!-- SECTION B -->
+        <tr class="top-links">
+          <td>
+            <table width="600" style="padding-top:20px; padding-bottom: 20px;">
+              <tbody>
+                <tr>
+                  <td>
+                    <h2 style="font-weight:100; color:#555555;">
+                      Product
+                      <strong>Mail</strong>
+                    </h2>
+                  </td>
+                  <td>
+                    <table class="menu-right-align" align="right" width="230">
+                      <tbody>
+                        <tr>
+                          <td align="right">
+                            <a href="#" class="about" style="text-decoration: none; color:#555555;">
+                              <font face="" color="#555555" size="2">ABOUT</font>
+                            </a>
+                          </td>
+                          <td align="right">
+                            <a href="#" class="service" style="text-decoration: none; color:#555555;">
+                              <font face="" color="#555555" size="2">SERVICE</font>
+                            </a>
+                          </td>
+                          <td align="right">
+                            <a href="#" class="contact" style="text-decoration: none; color:#555555;">
+                              <font face="" color="#555555" size="2">CONTACT</font>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="main_content">
+          <td>
+            <!-- SECTION C -->
+            <table class="sec-1" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; text-align:center; background: #ffffff; padding:0; border-top-left-radius:6px;border-top-right-radius:6px;box-shadow: 0 0 2px #ececec; table-layout:fixed;" align="center">
+              <tbody>
+                <tr>
+
+                  <!--contains all components of SECTION C-->
+                  <td style="padding-top: 20px;">
+
+                    <!-- title SECTION 1C -->
+                    <table width="380" align="center" style="border:1px solid #ececed;" ng-controller="mailController as secTitle">
+                      <tbody>
+                        <tr>
+                          <td style="padding:5px 20px; text-align:center;" align="center">
+                            <h2 class="title">
+                              <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                <span style="color:#555555; font-weight:100!important;" ng-show='{{secTitle.title.darkText}}'>{{secTitle.title.titleDark}}</span> 
+                                <span style="color:#d05d68; font-weight:100!important;" ng-show='{{secTitle.title.lightText}}'>{{secTitle.title.titleLight}}</span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!--content centered SECTION 2C-->
+                    <table class="content-ct" style="padding-top:20px; padding-bottom:20px; padding-right:40px; padding-left:40px;">
+                      <tbody>
+                        <tr>
+                          <td align="center" style="font-size: 14px; color:#a3a2a2">
+                            <font face="Helvetica, Arial,sans-serif" size="3" color="#A3A2A2">
+                              Lorem ipsum dolor sitamet, consetetur sadipscing elitr, seddiam nonumy eirmod tempam et justo duodolores et ea rebum. Lorem ipsum dolorsit amet, consetetur sadipscing elitr,sed diam nonumy eirmod tempam et justoduo dolores et ea rebum.
+                            </font>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- TOP CTA BUTTON | SECTION 3C -->
+                    <table class="btns" width="250" align="center" style="margin-left:auto; margin-right:auto;margin-bottom:20px;">
+                      <tbody>
+                        <tr>
+                          <td align="center">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" stroked="f" fillcolor="#d05d68">
+                                <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Download</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="106" align="center" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-dark" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:#d05d68;padding:6px 2px; border-radius:4px;">
+                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#000000">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                          Download
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                          <td align="center">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                            </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="106" align="center" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                          Read More
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table><!-- <![endif]-->
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <!-- POSTER | SECTION 4C -->
+                    <table class="poster" style="border-collapse: collapse;table-layout: fixed; width:600px !important;">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/sec-1-poster.jpg" width="600" height="253" alt="poster-1" />
+                            </a> 
+                            <img src="http://crm.quasargaming.com/2016/omar_test_images/shadow.png" />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                <!--end contains all components of sec-1-->
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION D -->
+            <table class="sec-2" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; text-align:center; background: #ffffff; padding:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <td>
+                    <!--2 COLUMN LEFT IMAGE | SECTION D1-->
+                    <table class="sec-2-ct-wrapper" width="100%" style="border-collapse: collapse;"> 
+                      <tbody>
+                        <tr>
+
+                          <!-- IMAGE LEFT -->
+                          <td width="50%" style="padding-bottom: 0;">
+                            <table class="poster-left" style="border-collapse: collapse;">
+                              <tbody>
+                                <tr>
+                                  <td align="left" style="background:#fafafa; padding-bottom: 0;">
+                                    <a href="https://litmus.com/" style="text-decoration: none;">
+                                      <img src="http://crm.quasargaming.com/2016/omar_test_images/poster-left-1.png" alt="poster-left-1" width="265" height="261" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- RIGHT CONTENT -->
+                          <td width="50%">
+                            <table class="content-rt">
+                              <tbody>
+
+                                <!-- TITLE -->
+                                <tr>
+                                  <td align="left">
+                                    <h2 style="font-weight:100;color:#555555;">
+                                      PRODUCT 
+                                      <font color="#D05D68" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight: 200;">
+                                          DESIGN
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <!-- SUBTITLE -->
+                                <tr>
+                                  <td align="left">
+                                    <h6 style="margin:0; margin-bottom:10px;">
+                                      <font face="Helvetica, Arial,sans-serif;" size="5" color="#6D6D6D">
+                                        <span style="font-size:16px; font-family:Helvetica, Arial,sans-serif;font-weight:100;">
+                                          Success in the design.
+                                        </span>
+                                      </font>
+                                    </h6>
+                                  </td>
+                                </tr>
+
+                                <!-- CONTENT -->
+                                <tr>
+                                  <td align="left">
+                                    <font face="Helvetica, Arial,sans-serif" color="#555555">
+                                      <span style="font-weight:100; font-size:14px;">
+                                        Nulla consequat massa quisenim. Donec pede justo, aliquetnec, vulputate justo, fringillavel, alinec,vulputate
+                                      </span>
+                                    </font>
+                                  </td>
+                                </tr>
+
+                                <!--CTAs-->
+                                <tr>
+                                  <td>
+                                    <table class="btns" width="230" align="center" style="margin-left:0;margin-top:20px;border-collapse: collapse;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="left">
+                                            <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                                            </v:roundrect>
+                                            <![endif]-->
+
+                                            <!--[if !mso]><\!-->
+                                            <a class="btn-light" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                                              <table width="106" align="center" border="0" cellspacing="0" cellpadding="0" style="width:106px;margin:0">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                                          Buy Now
+                                                        </a>
+                                                      </font>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </a>
+                                            <!-- <![endif]-->
+                                          </td>
+                                          <td align="center">
+                                            <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                                            </v:roundrect>
+                                            <![endif]-->
+
+                                            <!--[if !mso]><\!-->
+                                            <a class="btn-light" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                                              <table width="106" align="center" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                                          Read More
+                                                        </a>
+                                                      </font>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </a>
+                                            <!-- <![endif]-->
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <img class="shadow" src="http://crm.quasargaming.com/2016/omar_test_images/shadow.png" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION E -->
+            <table class="sec-3" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; text-align:center; background: #ffffff; padding:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <td>
+                    <!-- 2 COLUMN IMAGE RIGHT SECTION -->
+                    <table class="sec-2-ct-wrapper" width="100%">
+                      <tbody>
+                        <tr>
+                          <td width="50%" style="padding-left:12px;">
+                            <table class="content-rt">
+                              <tbody>
+                                <!-- TITLE -->
+                                <tr>
+                                  <td align="left">
+                                    <h2 style="font-weight:100;color:#555555;">PRODUCT <font color="#D05D68" face="Helvetica, Arial,sans-serif;">
+                                      <span style="font-weight: 200;">DESIGN</span></font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <!-- SUBTITLE -->
+                                <tr>
+                                  <td align="left">
+                                    <h6 style="margin:0; margin-bottom:10px;">
+                                      <font face="Helvetica, Arial,sans-serif;" size="5" color="#6D6D6D">
+                                        <span style="font-size:16px; font-family:Helvetica, Arial,sans-serif;font-weight:100;">
+                                          Success in thedesign.
+                                        </span>
+                                      </font>
+                                    </h6>
+                                  </td>
+                                </tr>
+
+                                <!-- CONTENT -->
+                                <tr>
+                                  <td align="left">
+                                    <font face="Helvetica, Arial,sans-serif" color="#555555">
+                                      <span style="font-weight:100; font-size:14px;">
+                                        Nulla consequat massa quisenim. Donec pede justo, aliquetnec, vulputate justo, fringillavel, alinec,vulputate
+                                      </span>
+                                    </font>
+                                  </td>
+                                </tr>
+
+                                <!--CTAs-->
+                                <tr>
+                                  <td>
+                                    <table class="btns" width="230" align="center" style="margin-left:0;margin-top:20px; border-collapse: collapse;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="left">
+                                            <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                                            </v:roundrect>
+                                            <![endif]-->
+
+                                            <!--[if !mso]><\!-->
+                                            <a class="btn-light" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                                              <table width="106" align="left" border="0" cellspacing="0" cellpadding="0" style="width:106px; margin: 0;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                                          Buy Now
+                                                        </a>
+                                                      </font>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </a>
+                                            <!-- <![endif]-->
+                                          </td>
+                                          <td align="center">
+                                            <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                                            </v:roundrect>
+                                            <![endif]-->
+
+                                            <!--[if !mso]><\!-->
+                                            <a class="btn-light" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                                              <table width="106" align="center" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                                          Read More
+                                                        </a>
+                                                      </font>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </a>
+                                            <!-- <![endif]-->
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- RIGHT IMAGE -->
+                          <td width="50%">
+                            <table class="poster-right" align="right">
+                              <tbody>
+                                <tr>
+                                  <td align="right" style="background:#fafafa">
+                                    <a href="https://litmus.com/" style="text-decoration: none;">
+                                      <img src="http://crm.quasargaming.com/2016/omar_test_images/poster-right-1.png" alt="poster-right-1" width="265" height="261" />
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <img class="shadow" src="http://crm.quasargaming.com/2016/omar_test_images/shadow.png" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION F -->
+            <table class="sec-4" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:10px;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <!-- 2 COLUMN - DETAILED THUMBNAIL -->
+                <tr>
+                  <td width="50%" style="padding-left:12px;padding-bottom:20px;">
+                    <table class="left-col">
+                      <tbody>
+                        <!-- THUMBNAIL -->
+                        <tr>
+                          <td align="center" style="background-color: #fafafa">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/left-col-1.jpg" width="271" height="146" alt="img-left-1" />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <!-- TITLE -->
+                        <tr>
+                          <td style="padding-left:12px;">
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                  Performance Options
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CONTENT -->
+                        <tr>
+                          <td style="padding-left:12px;">
+                            <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CTA -->
+                        <tr>
+                          <td align="left" style="padding-left:12px;padding-top:20px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" stroked="f" fillcolor="#d05d68">
+                                <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Download</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="106" align="left" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-dark" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:#d05d68;padding:6px 2px; border-radius:4px;">
+                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#000000">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                          Download
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+
+                  <td width="50%" style="padding-right:12px;padding-bottom:20px;">
+                    <table class="right-col">
+                      <tbody>
+                        <!-- THUMBNAIL -->
+                        <tr>
+                          <td align="center" style="background-color: #fafafa">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/right-col-1.jpg" width="271" height="146" alt="img-left-1" />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <!-- TITLE -->
+                        <tr>
+                          <td style="padding-left:12px;">
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                  Performance Options
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CONTENT -->
+                        <tr>
+                          <td style="padding-left:12px;">
+                            <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CTA -->
+                        <tr>
+                          <td align="left" style="padding-left:12px;padding-top:20px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" stroked="f" fillcolor="#d05d68">
+                                <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Download</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="106" align="left" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-dark" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:#d05d68;padding:6px 2px; border-radius:4px;">
+                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#000000">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                          Download
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr> 
+
+                <!-- BORDER -->        
+                <tr>
+                  <td colspan="2" style="border-top:1px solid #e9e9e9;border-bottom:1px solid #e1e1e1;"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION G -->
+            <table class="sec-5" width="100%" cellspacing="0" cellpadding="0" style="table-layout:fixed; font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:10px;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+
+                <!-- 3 COLUMN DETAILED THUMBNAIL -->
+                <tr>
+                  <!--column 1-->
+                  <td style="padding-left:12px;padding-top:10px;padding-bottom:10px;width:33.3%;">
+                    <table>
+                      <tbody>
+                        <!-- THUMBNAIL -->
+                        <tr>
+                          <td align="center" width="33%" style=";">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/col-1-img.jpg" alt="" width="170" height="128" />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <!-- TITLE -->
+                        <tr>
+                          <td align="left" width="33%" style="padding-left:14px;">
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight: 600; font-size:18px;mso-line-height-rule:exactly; line-height:40px;">
+                                  Column One
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CONTENT -->
+                        <tr>
+                          <td style="padding-left:14px;">
+                            <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CTA -->
+                        <tr>
+                          <td align="left" style="padding-left:14px;padding-top:20px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:88px;height:26px;v-text-anchor:middle;w" arcsize="8%" stroked="f" fillcolor="#d05d68">
+                                <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:12px;">BUY NOW</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="92" align="left" border="0" cellspacing="0" cellpadding="0" style="width:92px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-dark" width="106" align="center" valign="middle" style="width:92px;text-align:center;background-color:#d05d68;padding:7px 2px; border-radius:4px;">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#000000">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                          BUY NOW
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+
+                  <!--column 2-->
+                  <td style="padding-top:10px;padding-bottom:10px;width:33.3%;">
+                    <table>
+                      <tbody>
+                        <!-- THUMBNAIL -->
+                        <tr>
+                          <td align="center" width="33%" style=";">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/col-2-img.jpg" alt="" width="170" height="128" />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <!-- TITLE -->
+                        <tr>
+                          <td align="left" width="33%" style="padding-left:14px;">
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight: 600; font-size:18px;mso-line-height-rule:exactly; line-height:40px;">
+                                  Column Two
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CONTENT -->
+                        <tr>
+                          <td style="padding-left:14px;">
+                            <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CTA -->
+                        <tr>
+                          <td align="left" style="padding-left:14px;padding-top:20px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:88px;height:26px;v-text-anchor:middle;w" arcsize="8%" stroked="f" fillcolor="#d05d68">
+                                <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:12px;">BUY NOW</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="92" align="left" border="0" cellspacing="0" cellpadding="0" style="width:92px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-dark" width="106" align="center" valign="middle" style="width:92px;text-align:center;background-color:#d05d68;padding:7px 2px; border-radius:4px;">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#000000">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                          BUY NOW
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+
+                  <!--column 3-->
+                  <td style="padding-right:12px;padding-top:10px;padding-bottom:10px;width:33.3%;">
+                    <table>
+                      <tbody>
+                        <!-- THUMBNAIL -->
+                        <tr>
+                          <td align="center" width="33%" style=";">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/col-3-img.jpg" alt="" width="170" height="128" />
+                            </a>
+                          </td>
+                        </tr>
+
+                        <!-- TITLE -->
+                        <tr>
+                          <td align="left" width="33%" style="padding-left:14px;">
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight: 600; font-size:18px;mso-line-height-rule:exactly; line-height:40px;">
+                                  Column Three
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CONTENT -->
+                        <tr>
+                          <td style="padding-left:14px;">
+                            <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempam et justo duo dolores et ea rebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CTA -->
+                        <tr>
+                          <td align="left" style="padding-left:14px;padding-top:20px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:88px;height:26px;v-text-anchor:middle;w" arcsize="8%" stroked="f" fillcolor="#d05d68">
+                                <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:12px;">BUY NOW</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="92" align="left" border="0" cellspacing="0" cellpadding="0" style="width:92px;">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-dark" width="106" align="center" valign="middle" style="width:92px;text-align:center;background-color:#d05d68;padding:7px 2px; border-radius:4px;">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#000000">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                          BUY NOW
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION H -->
+            <table class="sec-6" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:10px;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <!-- section wrapper | 2 COLUMN POSTER LEFT -->
+                  <td style="padding-left:12px; padding-right: 12px; padding-top: 20px;padding-bottom: 20px;border-top:1px solid #d2d2d2;">
+                    <table class="thumb-left">
+                      <tbody>
+                        <tr>
+
+                          <!-- POSTER -->
+                          <td width="51%" align="center" style=";">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/thumb-left.jpg" alt="images alt" width="271" height="147" />
+                            </a>
+                          </td>
+
+                          <!-- CONTENT -->
+                          <td width="49%" class="thumb-left-ct">
+                            <table>
+                              <tbody>
+
+                                <!-- TITLE -->
+                                <tr>
+                                  <td>
+                                    <h2>
+                                      <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight: 100; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                          TemplateBuilder
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <!-- TEXT -->
+                                <tr>
+                                  <td>
+                                    <h2>
+                                      <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight:100; font-size:14px;">
+                                          Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod tempamet justo duo dolores et earebum.
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <!--CTAs-->
+                                <tr>
+                                  <td>
+                                    <table class="btns" width="230" align="center" style="margin-left:0;margin-top:20px;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="left">
+                                            <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                                            </v:roundrect>
+                                            <![endif]-->
+
+                                            <!--[if !mso]><\!-->
+                                            <a class="btn-light" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                                              <table width="106" align="left" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                                          Buy Now
+                                                        </a>
+                                                      </font>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </a>
+                                            <!-- <![endif]-->
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION I -->
+            <table class="sec-6" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:10px;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <!-- section wrapper | 2 COLUMN POSTER RIGHT -->
+                  <td style="padding-left:12px; padding-right: 12px; padding-top: 20px;padding-bottom: 20px;border-top:1px solid #d2d2d2;">
+                    <table class="thumb-right">
+                      <tbody>
+                        <tr>
+
+                          <!-- CONTENT -->
+                          <td width="49%" class="thumb-left-ct">
+                            <table>
+                              <tbody>
+
+                                <!-- TITLE -->
+                                <tr>
+                                  <td>
+                                    <h2>
+                                      <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight: 100; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                          TemplateBuilder
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <!-- TEXT -->
+                                <tr>
+                                  <td>
+                                    <h2>
+                                      <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight:100; font-size:14px;">
+                                          Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod tempamet justo duo dolores et earebum.
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <!--CTAs-->
+                                <tr>
+                                  <td>
+                                    <table class="btns" width="230" align="center" style="margin-left:0;margin-top:20px;">
+                                      <tbody>
+                                        <tr>
+                                          <td align="left">
+                                          <!--[if mso]>
+                                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:106px;height:32px;v-text-anchor:middle;w" arcsize="4%" strokecolor="#CDCDCE" fillcolor="transparent">
+                                                <center style="color:#d05d68;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Read More</center>
+                                            </v:roundrect>
+                                            <![endif]-->
+
+                                            <!--[if !mso]><\!-->
+                                            <a class="btn-light" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                                              <table width="106" align="left" border="0" cellspacing="0" cellpadding="0" style="width:106px;">
+                                                <tbody>
+                                                  <tr>
+                                                    <td class="btn-light" width="106" align="center" valign="middle" style="width:106px;text-align:center;background-color:transparent;padding:6px 2px; border-radius:4px;border:1px solid #cdcdce;">
+                                                      <font face="Helvetica, Arial,sans-serif" size="3" color="#d05d68 !important">
+                                                        <a href="http://buttons.cm" target="_blank" style="color:#d05d68; text-decoration: none;">
+                                                          Buy Now
+                                                        </a>
+                                                      </font>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </a>
+                                            <!-- <![endif]-->
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- POSTER -->
+                          <td width="51%" align="center" style=";">
+                            <a href="https://litmus.com/" style="text-decoration: none;">
+                              <img src="http://crm.quasargaming.com/2016/omar_test_images/thumb-right.jpg" alt="images alt" width="271" height="147" />
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION J -->
+            <table class="sec-8" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:10px;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+
+                <!-- FOOTER CONTENT LEFT TO RIGHT -->
+                <tr>
+                  <td style="padding-left:12px; padding-right: 12px; padding-top: 5px;padding-bottom: 5px;border-top:1px solid #dddddd">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+
+                          <!-- LEFT CONTENT -->
+                          <td width="70%">
+                            <h2 class="title">
+                              <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                <span style="color:#555555;font-size:16px;font-weight:600;">
+                                  PRODUCTS
+                                </span> 
+                                <span style="color:#d05d68;font-size:16px;font-weight:600;">
+                                  GALLERY
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+
+                          <!-- RIGHT CONTENT -->
+                          <td width="30%" align="right">
+                            <h2 class="title">
+                              <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                <span style="color:#d05d68;font-size:14px;font-weight:600;">
+                                  30 June 2013
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION K -->
+            <table class="sec-9" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <!-- section wrapper | 4 COLUMN CURVED THUMBNAIL-->
+                  <td style="padding-left:12px; padding-right: 12px; padding-top: 20px;padding-bottom: 20px;border-top:1px solid #d2d2d2;">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+
+                          <!-- COLUMN 1 -->
+                          <td>
+                            <table class="thumb-circle-1">
+                              <tbody>
+
+                                <!-- THUMBNAIL -->
+                                <tr>
+                                  <td align="center" style="; border-radius:100px;">
+                                    <a href="https://litmus.com/" style="text-decoration: none;">
+                                      <img src="http://crm.quasargaming.com/2016/omar_test_images/thumb-circle-1.png" alt="images alt" width="124" height="124" />
+                                    </a>
+                                  </td>
+                                </tr>
+
+                                <!-- CONTENT -->
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Lorem ipsumdolor.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- COLUMN 2 -->
+                          <td>
+                            <table class="thumb-circle-2">
+                              <tbody>
+
+                                <!-- THUMBNAIL -->
+                                <tr>
+                                  <td align="center" style="; border-radius:100px;">
+                                    <a href="https://litmus.com/" style="text-decoration: none;">
+                                      <img src="http://crm.quasargaming.com/2016/omar_test_images/thumb-circle-2.png" alt="images alt" width="124" height="124" />
+                                    </a>
+                                  </td>
+                                </tr>
+
+                                <!-- CONTENT -->
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Lorem ipsum dolor.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- COLUMN 3 -->
+                          <td>
+                            <table class="thumb-circle-3">
+                              <tbody>
+
+                                <!-- THUMBNAIL -->
+                                <tr>
+                                  <td align="center" style="; border-radius:100px;">
+                                    <a href="https://litmus.com/" style="text-decoration: none;">
+                                      <img src="http://crm.quasargaming.com/2016/omar_test_images/thumb-circle-3.png" alt="images alt" width="124" height="124" />
+                                    </a>
+                                  </td>
+                                </tr>
+
+                                <!-- CONTENT -->
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Lorem ipsumdolor.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- COLUMN 4 -->
+                          <td>
+                            <table class="thumb-circle-4">
+                              <tbody>
+
+                                <!-- THUMBNAIL -->
+                                <tr>
+                                  <td align="center" style="; border-radius:100px;">
+                                    <a href="https://litmus.com/" style="text-decoration: none;">
+                                      <img src="http://crm.quasargaming.com/2016/omar_test_images/thumb-circle-4.png" alt="images alt" width="124" height="124" />
+                                    </a>
+                                  </td>
+                                </tr>
+
+                                <!-- CONTENT -->
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Lorem ipsumdolor.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION L -->
+            <table class="sec-10" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+
+                <!-- 1 COLUMN LEFT CONTENT -->
+                <tr>
+                  <td style="border-top:1px solid #d2d2d2;padding-top:10px;padding-bottom: 10px;">
+                  <table width="100%">
+                      <tbody>
+                        <tr>
+
+                          <!-- ICON -->
+                          <td align="center" width="10%">
+                            <img src="http://crm.quasargaming.com/2016/omar_test_images/calendar.png" width="30" height="34" />
+                          </td>
+
+                          <!-- TITLE -->
+                          <td>
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;"><span style="font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">Calendar and Events</span></font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- CONTENT -->
+                        <tr>
+                          <td colspan="2" style="padding-top:10px;padding-left:12px;padding-right: 12px;">
+                          <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diamnonumy eirmod tempam et justo duodolores et ea rebum. Lorem ipsumdolor sit amet, consetetur sadipscingelitr, sed diam nonumy eirmod tempamet justo duo dolores et earebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+
+                        <!-- LINK -->
+                        <tr>
+                          <td colspan="2" style="padding-top:18px;padding-left:12px;padding-right: 12px;">
+                            <a class="dark-link" href="#" style="text-decoration: none;">
+                              <font face="Helvetica, Arial,sans-serif;" size="2" color="#D05D68">
+                                <span style="font-weight: 600;">
+                                  Learn more
+                                </span>
+                              </font>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION M -->
+            <table class="sec-11" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+
+                <!-- 2 COLUMN CONTENT -->
+                <tr>
+                  <td style="border-top:1px solid #d2d2d2;padding-top:10px">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+
+                          <!-- LEFT COLUMN -->
+                          <td rowspan="3" width="15%">
+                            <table width="100%">
+                              <tbody>
+                                <tr>
+                                  <td align="center" style="border-right: 1px solid #dddddd;">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td style="border-bottom:1px solid #dddddd">
+                                            <h1 style="margin:0">
+                                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100;mso-line-height-rule:exactly; line-height:40px;">
+                                                  30
+                                                </span>
+                                              </font>
+                                            </h1>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td align="center"
+                                          valign="top">
+                                            <font size="4" color="#D05D68" face="Helvetica, Arial,sans-serif;">
+                                              <span style="font-weight:100;mso-line-height-rule:exactly; line-height:40px;">
+                                                oct
+                                              </span>
+                                            </font>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- RIGHT COLUMN -->
+                          <td style="padding-left: 12px;">
+                            <h2>
+                              <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                  Responsive Email Template
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top:10px;padding-left:12px;padding-right: 12px;">
+                          <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:14px;">
+                                  Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diamnonumy eirmod tempam et justo duodolores et ea rebum. Lorem ipsumdolor sit amet, consetetur sadipscingelitr, sed diam nonumy eirmod tempamet justo duo dolores et earebum.
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top:18px;padding-left:12px;padding-right: 12px;">
+                            <a class="dark-link" href="#" style="text-decoration: none;">
+                              <font face="Helvetica, Arial,sans-serif;" size="2" color="#D05D68">
+                                <span style="font-weight: 600;">
+                                  Learn more
+                                </span>
+                              </font>
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION N -->
+            <table class="sec-12" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+
+                  <!-- 2 COLUMN BULLET FORM CONTENT -->
+                  <td style="border-top:1px solid #d2d2d2;padding-top:10px;padding-bottom: 10px;">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+                          <td style="padding-left: 12px;" width="50%">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <td align="center" width="10%">
+                                    <img src="http://crm.quasargaming.com/2016/omar_test_images/check.png" width="27" height="27" />
+                                  </td>
+                                  <td>
+                                    <h2>
+                                      <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                        <span style="padding-left:5px;font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                          Performance Options
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding-top:10px;padding-right: 12px;">
+                                  <h2>
+                                      <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight:100; font-size:14px;">
+                                          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempamet justo duo.
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td style="padding-left: 12px;" width="50%">
+                            <table>
+                              <tbody>
+                                <tr>
+                                  <td align="center" width="10%">
+                                    <img src="http://crm.quasargaming.com/2016/omar_test_images/add.png" width="27" height="27" />
+                                  </td>
+                                  <td>
+                                    <h2>
+                                      <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                        <span style="padding-left:5px;font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                          Performance Options
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" style="padding-top:10px;padding-right: 12px;">
+                                  <h2>
+                                      <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight:100; font-size:14px;">
+                                          Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod tempamet justo duo.
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <!-- SECTION O -->
+            <table class="sec-13" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <!-- section wrapper | 3 COLUM POINTS FORM -->
+                  <td style="padding-left:12px; padding-right: 12px; padding-top: 20px;padding-bottom: 20px;border-top:1px solid #d2d2d2;">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+
+                          <!-- COLUMN 1 -->
+                          <td>
+                            <table class="icon-1">
+                              <tbody>
+                                <tr>
+                                  <td align="center" style="padding-bottom: 20px;">
+                                    <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-1.png" alt="images alt" width="49" height="38" />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" style="padding-bottom:5px;">
+                                    <h2 class="title">
+                                      <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                        <span style="color:#555555;font-size:18px;font-weight:600;">
+                                          Column 1
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Nulla consequat massaquis enim. Donec pedejusto.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- COLUMN 2 -->
+                          <td>
+                            <table class="icon-2">
+                              <tbody>
+                                <tr>
+                                  <td align="center" style="padding-bottom: 20px;">
+                                    <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-2.png" alt="images alt" width="49" height="38" />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" style="padding-bottom:5px;">
+                                    <h2 class="title">
+                                      <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                        <span style="color:#555555;font-size:18px;font-weight:600;">
+                                          Column 1
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Nulla consequat massaquis enim. Donec pedejusto.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- COLUMN 3 -->
+                          <td>
+                            <table class="icon-2">
+                              <tbody>
+                                <tr>
+                                  <td align="center" style="padding-bottom: 20px;">
+                                    <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-3.png" alt="images alt" width="49" height="38" />
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" style="padding-bottom:5px;">
+                                    <h2 class="title">
+                                      <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                        <span style="color:#555555;font-size:18px;font-weight:600;">
+                                          Column 1
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="center">
+                                            <h2>
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  Nulla consequat massaquis enim. Donec pedejusto.
+                                                </span>
+                                              </font>
+                                            </h2>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION P -->
+            <table class="sec-14" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <!-- 1 COLUMN QUOTATION -->
+                  <td align="center" style="border-top:1px solid #d2d2d2;padding-top:15px;padding-bottom: 15px;">
+                    <table width="90%" style="margin-left:auto; margin-right: auto;">
+                      <tbody>
+                        <tr>
+                          <td colspan="2" style="padding-top:10px; padding-bottom: 10px; padding-left:20px;padding-right: 20px; background-color: #ebebeb; border-left:2px solid red;">
+                            <h2>
+                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                <span style="font-weight:100; font-size:16px;">
+                                  “ Lorem ipsum dolor sit amet,consetetur sadipscing elitr, sed diamnonumy eirmod tempam et justo duodolores et ea rebum. Lorem ipsumdolor sit amet, consetetur sadipscingelitr, sed diam nonumy eirmod tempamet justo duo dolores et ea rebum.“
+                                </span>
+                              </font>
+                            </h2>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION Q -->
+            <table class="sec-15" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+
+                  <!-- 1 COLOUMN MULTIPLE ROWS TESTIMONIAL -->
+                  <td style="border-top:1px solid #d2d2d2;padding-top:10px">
+                    <table>
+                      <tbody>
+
+                        <!-- ROW 1 -->
+                        <tr>
+                          <td>
+                            <table width="100%" style="padding-bottom: 10px;">
+                              <tbody>
+                                <tr>
+                                  <td rowspan="3" width="17%">
+                                    <table width="100%">
+                                      <tbody>
+                                        <tr>
+                                          <td align="right" style="padding-top: 10px;">
+                                            <img src="http://crm.quasargaming.com/2016/omar_test_images/pic-1.png" alt="this shows cus no image" width="69" height="69" />
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                  <td style="padding-left: 12px;">
+                                    <h2>
+                                      <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                          Forzen
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="padding-left:12px;padding-right: 12px;">
+                                  <h2>
+                                      <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight:100; font-size:14px;">
+                                          Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod tempamet justo duo dolores et earebum. Lorem ipsum dolor sit amet, consetetur sadipscingelitr.
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <!-- ROW 2 -->
+                        <tr>
+                          <td>
+                            <table width="100%" style="padding-bottom: 10px;">
+                              <tbody>
+                                <tr>
+                                  <td rowspan="3" width="17%">
+                                    <table width="100%">
+                                      <tbody>
+                                        <tr>
+                                          <td align="right" style="padding-top: 10px;">
+                                            <img src="http://crm.quasargaming.com/2016/omar_test_images/pic-2.png" alt="this shows cus no image" width="69" height="69" />
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                  <td style="padding-left: 12px;">
+                                    <h2>
+                                      <font color="#555555" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight: 600; font-size:20px;mso-line-height-rule:exactly; line-height:40px;">
+                                          Forzen
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="padding-left:12px;padding-right: 12px;">
+                                  <h2>
+                                      <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                        <span style="font-weight:100; font-size:14px;">
+                                          Lorem ipsum dolor sit amet,consetetur sadipscing elitr,sed diam nonumy eirmod tempamet justo duo dolores et earebum. Lorem ipsum dolor sit amet, consetetur sadipscingelitr.
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION R -->
+            <table class="sec-16" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+                <tr>
+                  <!-- section wrapper | LINK LIST-->
+                  <td style="padding-left:12px; padding-right: 12px; padding-top: 20px;padding-bottom: 20px;border-top:1px solid #d2d2d2;">
+                    <table width="100%">
+                      <tbody>
+                        <tr>
+                          <!-- COLUMN 1 -->
+                          <td style="padding-left: 12px; padding-right: 12px;">
+                            <table class="thumb-circle-1">
+                              <tbody>
+
+                                <!-- TITLE -->
+                                <tr>
+                                  <td align="left" style="padding-bottom:10px;">
+                                    <h2 class="title">
+                                      <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                        <span style="color:#d05d68;font-size:22px;font-weight:100;">
+                                          BASIC
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <!-- LINK 1 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-1
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+
+                                        <!-- LINK 2 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-2
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+
+                                        <!-- LINK 3 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-3
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+
+                                        <!-- LINK 4 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-4
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <!-- COLUMN 2 -->
+                          <td style="padding-left: 12px; padding-right: 12px;">
+                            <table class="thumb-circle-1">
+                              <tbody>
+
+                                <!-- TITLE -->
+                                <tr>
+                                  <td align="left" style="padding-bottom:10px;">
+                                    <h2 class="title">
+                                      <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                        <span style="color:#d05d68;font-size:22px;font-weight:100;">
+                                          ADVANCED
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <!-- LINK 1 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-1
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+
+                                        <!-- LINK 2 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-2
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+
+                                        <!-- LINK 3 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-3
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+
+                                        <!-- LINK 4 --> 
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <a class="footer-link" href="#" style="text-decoration: none;">
+                                              <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                                <span style="font-weight:100; font-size:14px;">
+                                                  bullet-number-4
+                                                </span>
+                                              </font>
+                                            </a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+
+                          <td valign="top" width="40%" style="padding-left: 12px; padding-right: 12px; padding-top: 0;">
+                            <table class="thumb-circle-1">
+                              <tbody>
+                                <tr>
+                                  <td align="left" style="padding-bottom:10px;">
+                                    <h2 class="title">
+                                      <font face="Helvetica, Arial,sans-serif;" color="#555555">
+                                        <span style="color:#413e3e;font-size:22px;font-weight:100;">
+                                          PRODUCTMAIL
+                                        </span>
+                                      </font>
+                                    </h2>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="thumb-center-ct">
+                                    <table>
+                                      <tbody>
+                                        <tr>
+                                          <td align="left" style="padding-bottom: 5px;">
+                                            <font color="#A3A2A2" face="Helvetica, Arial,sans-serif;">
+                                              <span style="font-weight:100; font-size:14px;mso-line-height-rule:exactly; line-height:25px;">
+                                                Lorem ipsum dolor sitamet, consetetursadipscing elitr, seddiam nonumy Lorem ipsumdolor sit amet,consetetur
+                                              </span>
+                                            </font>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- SECTION S -->
+            <table class="sec-17" width="100%" cellspacing="0" cellpadding="0" style="font-family: Helvetica, Arial,sans-serif; background: #ffffff; padding:0; padding-top:0;border-bottom-left-radius:6px;border-bottom-right-radius:6px;box-shadow: 0 0 2px #ececec;" align="center">
+              <tbody>
+
+                <!-- SOCIAL MEDIA --> 
+                <tr>
+                  <td align="center" style="border-top:1px solid #c7c7c7; padding-top: 10px;padding-bottom: 10px;">
+                    <table width="95%">
+                      <tbody>
+                        <tr>
+                          <td style="padding-top:14px; padding-bottom: 14px;">
+
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:77px;height:23px;v-text-anchor:middle;w" arcsize="1%" strokecolor="rgba(255,255,255,0.7)" fillcolor="transaprent">
+                                <center style="color:#868686;font-family:Helvetica, Arial,sans-serif;font-size:11px;">facebook</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="75" align="center" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-fb facebook" width="75" align="center" valign="middle" style="text-align:center;padding:3px 0; border-radius:1px; border:1px solid rgba(226, 226, 226, 0.7)">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#868686">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#868686; text-decoration: none;">
+                                          facebook
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+
+                          <td style="padding-top:14px; padding-bottom: 14px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:77px;height:23px;v-text-anchor:middle;w" arcsize="1%" strokecolor="rgba(255,255,255,0.7)" fillcolor="transaprent">
+                                <center style="color:#868686;font-family:Helvetica, Arial,sans-serif;font-size:11px;">twitter</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="75" align="center" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-fb twitter" width="75" align="center" valign="middle" style="text-align:center;padding:3px 0; border-radius:1px; border:1px solid rgba(226, 226, 226, 0.7)">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#868686">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#868686; text-decoration: none;">
+                                          twitter
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+
+                          <td style="padding-top:14px; padding-bottom: 14px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:77px;height:23px;v-text-anchor:middle;w" arcsize="1%" strokecolor="rgba(255,255,255,0.7)" fillcolor="transaprent">
+                                <center style="color:#868686;font-family:Helvetica, Arial,sans-serif;font-size:11px;">twitter</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="75" align="center" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-fb google" width="75" align="center" valign="middle" style="text-align:center;padding:3px 0; border-radius:1px; border:1px solid rgba(226, 226, 226, 0.7)">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#868686">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#868686; text-decoration: none;">
+                                          Google+
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+
+                          <td style="padding-top:14px; padding-bottom: 14px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:77px;height:23px;v-text-anchor:middle;w" arcsize="1%" strokecolor="rgba(255,255,255,0.7)" fillcolor="transaprent">
+                                <center style="color:#868686;font-family:Helvetica, Arial,sans-serif;font-size:11px;">rss</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="75" align="center" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-fb rss" width="75" align="center" valign="middle" style="text-align:center;padding:3px 0; border-radius:1px; border:1px solid rgba(226, 226, 226, 0.7)">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#868686">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#868686; text-decoration: none;">
+                                          rss
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+
+                          <td style="padding-top:14px; padding-bottom: 14px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:77px;height:23px;v-text-anchor:middle;w" arcsize="1%" strokecolor="rgba(255,255,255,0.7)" fillcolor="transaprent">
+                                <center style="color:#868686;font-family:Helvetica, Arial,sans-serif;font-size:11px;">Pinterest</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="75" align="center" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-pt pinterest" width="75" align="center" valign="middle" style="text-align:center;padding:3px 0; border-radius:1px; border:1px solid rgba(226, 226, 226, 0.7)">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#868686">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#868686; text-decoration: none;">
+                                          Pinterest
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+
+                          <td style="padding-top:14px; padding-bottom: 14px;">
+                            <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:77px;height:23px;v-text-anchor:middle;w" arcsize="1%" strokecolor="rgba(255,255,255,0.7)" fillcolor="transaprent">
+                                <center style="color:#868686;font-family:Helvetica, Arial,sans-serif;font-size:11px;">linkedin</center>
+                              </v:roundrect>
+                            <![endif]-->
+
+                            <!--[if !mso]><\!-->
+                            <a class="btn-dark" href="http://buttons.cm" target="_blank" style="text-decoration: none;">
+                              <table width="75" align="center" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td class="btn-in linkedin" width="75" align="center" valign="middle" style="text-align:center;padding:3px 0; border-radius:1px; border:1px solid rgba(226, 226, 226, 0.7)">
+                                      <font face="Helvetica, Arial,sans-serif" size="2" color="#868686">
+                                        <a href="http://buttons.cm" target="_blank" style="color:#868686; text-decoration: none;">
+                                          linkedin
+                                        </a>
+                                      </font>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </a>
+                            <!-- <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+
+        <!-- SECTION T -->
+        <tr>
+
+          <!-- FOOTER 1 2 COLUMN -->
+          <td style="padding-bottom: 10px;">
+            <table>
+              <tbody>
+                <tr class="top-links">
+                  <td>
+                    <table width="600">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <h2 style="font-size:16px;font-weight:100; color:#555555;">
+                              Product
+                              <strong>Mail</strong>
+                            </h2>
+                          </td>
+                          <td width="20%">
+                            <table class="menu-right-align" align="right" width="290">
+                              <tbody>
+                                <tr>
+                                  <td align="right">
+                                    <a href="#" class="about" style="text-decoration: none; color:#d05d68;">
+                                    <font face="" color="#D05D68"><span style="font-size: 12px;">unsibscribe</span></font></a>
+                                  </td>
+                                  <td align="center" width="5%">
+                                    <font face="" color="#555555">|</font>
+                                  </td>
+                                  <td align="right" width="41%">
+                                    <a href="#" class="contact" style="text-decoration: none; color:#d05d68;">
+                                      <font face="" color="#D05D68">
+                                        <span style="font-size: 12px;">
+                                          update preferences
+                                        </span>
+                                      </font>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- FOOTER BAR -->
+    <table border="0" cellspacing="0" class="menu_bar" style="border-collapse:collapse;width:100%; color:#fff;background-color: #d05d68;" width="100%">
+      <tbody>
+        <tr>
+          <td align="center" style="padding-top:10px;padding-bottom:10px;">
+            <span style="font-size:12px; font-weight: 100; color: #ffffff;">
+              Your company here , all rights reserved 2013 ©
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/cms.js"></script>
+  </body>
+</html>

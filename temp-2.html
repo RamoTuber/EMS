@@ -1,0 +1,375 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="email">
+  <head>
+    <title></title>
+    <meta charset="utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/global.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/css/froala_editor.min.css' rel='stylesheet' type='text/css' />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.4.0/css/froala_style.min.css' rel='stylesheet' type='text/css' />
+
+    <style type="text/css">
+        body {
+          font-family: 'Lato', sans-serif !important;
+        }
+
+        /*table {
+          border:1px dashed green;
+        }
+
+        tr {
+          border:1px dotted #b9b9b9;
+        }
+
+        td {
+          border:1px dotted #bfbfbf;
+        }
+*/
+        @media screen and (max-width:620px){
+          .thumb_wrapper {
+            width: 100%;
+            text-align: center;
+          }
+
+          .thumb_wrapper img {
+            width: 64% !important;
+          }
+
+          .main_wrapper {
+            width: 100%;
+          }
+
+          .letter_content, .action_content, .help_content, .credentials_content, .banner {
+            width:95% !important;
+          }
+
+          #banner {
+            width: 100%;
+          }
+
+          .CTA_btn {
+            width: 60%;
+          }
+
+          .payments {
+            width: 98% !important;
+          }
+
+          .btn-dark, .btn-dark-wrapper {
+            width: 212px !important;
+          }
+
+          .logo {
+            width: 150px;
+          }
+        }
+
+        @media screen and (max-width:430px){
+          .thumb_wrapper img {
+            width: 85% !important;
+          }
+
+          .CTA_btn {
+            width: 85%;
+          }
+        }
+    </style>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/cms.js"></script>
+
+  </head>
+
+  <body style="background: #e1e1e1;padding:0; margin:0;background-repeat: no-repeat;" ng-controller="AppController as vm">
+
+  <table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr>
+    <td background="http://crm.quasargaming.com/2016/omar_test_images/bg-email.png" bgcolor="#e1e1e1" valign="top">
+
+      <div>
+
+    <!-- main content wrapper -->
+    <table class="main_wrapper" align="center" width="600" cellspacing="0" cellpadding="0" style="text-align:center; margin-left:auto; margin-right:auto; table-layout:fixed; cursive;">
+      <!-- header -->
+      <tr>
+        <td class="header" style="padding: 12px 0;">
+          <table width="100%" style="text-align: center;padding-bottom: 14px;">
+            <tr>
+              <td>
+                <img class="logo" src="https://1637326958.rsc.cdn77.org/2016/reactivation-campaign/assets/01-quasar-logo.png" alt="quasar gaming">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- banner -->  
+      <tr>
+        <td>
+          <table class="banner" cellpadding="0" cellspacing="0" style="width: 590px;margin: auto;text-align: center;">
+            <tr>
+              <td>
+                <img id="banner" src="http://crm.quasargaming.com/2016/omar_test_images/poster_banner.png" alt="banner" style="vertical-align: bottom;">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- letter -->
+      <tr>
+        <td>
+          <table class="letter_content" style="text-align: center;text-align: center;width: 580px;margin: auto;padding: 5px 15px;background-color: rgb(255,255,255);">
+            <!-- title -->
+            <tr>
+              <td style="font-family: 'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif; padding-top: 40px;">
+                <font color="#858585" size="3.5">Welcome to Quasar Gaming!</font>
+                <h3 style="margin: 0;font-family: 'Segoe UI Light','Segoe UI','Helvetica Neue Medium',Arial,sans-serif;"><font color="#2465d6" size="5">Home for novomatic slots.</font></h3>
+              </td>
+            </tr>
+
+            <!-- letter content -->
+            <tr>
+              <td style="padding: 34px 0;font-family: 'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;color: #818181;">
+                Play your favourite Novomatic Casino Games on your mobile or desktop anytime, anywhere. What's in it for you? Big Bonuses and great Cashbacks every week; which will earn you loyalty points that can be exchanged for great gifts and prizes. Register now with Promo Code – <a href="#" style="text-decoration: none;"><font color="#4d84e3">EXCLUSIVE</font></a> and <a style="text-decoration: none;" href="#"><font color="#4d84e3">DOUBLE YOUR FIRST DEPOSIT</font></a> up to <a style="text-decoration: none;" href="#"><font color="#4d84e3">€300 for FREE</font></a>
+                <br>
+                <br>
+                We've got huge Jackpot games that can change your life. Win with Quasar and withdraw your funds instantly into your preferred payment method. Don't just take our word for it... <a style="text-decoration: none;" href="#"><font color="#4d84e3">Create an account today!</font></a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- featured games -->
+      <tr>
+        <td>
+          <table align="center" class="featured" style="padding: 10px 0;padding-bottom: 0;background: #0089ff; text-align: center;width: 100%;box-shadow: 0 2px 3px rgba(0,0,0,0.6);">
+            <tr>
+              <td colspan="3" style="padding: 10px 0 19px 0; font-weight: 400;">
+                <h4 style="margin: 0;">
+                  <font color="#ffffff">Recommeded Slots</font>
+                </h4>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table style="margin: auto;">
+                  <tr>
+                    <td>
+                      <table align="left" width="170" class="thumb_wrapper">
+                        <tr>
+                          <td style="padding: 8px 1px;">
+                            <img width="170" style="width: 170px;" src="http://crm.quasargaming.com/2016/omar_test_images/thumb1.png" alt="thumb1">
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="left" width="170" class="thumb_wrapper">
+                        <tr>
+                          <td style="padding: 8px 1px;">
+                            <img width="170" style="width: 170px;" src="http://crm.quasargaming.com/2016/omar_test_images/thumb2.png" alt="thumb2">
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="left" width="170" class="thumb_wrapper">
+                        <tr>
+                          <td style="padding: 8px 1px;">
+                            <img width="170" style="width: 170px;" src="http://crm.quasargaming.com/2016/omar_test_images/thumb3.png" alt="thumb3">
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>
+                <table style="margin: auto;">
+                  <tr>
+                    <td>
+                      <table align="left" width="170" class="thumb_wrapper">
+                        <tr>
+                          <td style="padding: 8px 1px;">
+                            <img width="170" style="width: 170px;" src="http://crm.quasargaming.com/2016/omar_test_images/thumb4.png" alt="thumb4">
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="left" width="170" class="thumb_wrapper">
+                        <tr>
+                          <td style="padding: 8px 1px;">
+                            <img width="170" style="width: 170px;" src="http://crm.quasargaming.com/2016/omar_test_images/thumb5.png" alt="thumb5">
+                          </td>
+                        </tr>
+                      </table>
+                      <table align="left" width="170" class="thumb_wrapper">
+                        <tr>
+                          <td style="padding: 8px 1px;">
+                            <img width="170" style="width: 170px;" src="http://crm.quasargaming.com/2016/omar_test_images/thumb6.png" alt="thumb6">
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              
+            </tr>
+
+            <tr>
+              <td colspan="3">
+                <img class="CTA_btn" src="http://crm.quasargaming.com/2016/omar_test_images/test1.png">
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+
+      <!-- action -->
+      <tr>
+        <td>
+          <table class="action_content" align="center" width="100%" style="text-align: center;text-align: center;padding-top:20px;background-color: rgb(255,255,255);width: 580px;padding-top: 40px;margin:auto;">
+            <tr>
+              <td>
+
+                  <!--[if mso]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="width:300px;height:49px;v-text-anchor:middle;position:static;" arcsize="4%" stroked="f" fillcolor="#27c13f">
+                      <center style="color:#ffffff;font-family:Helvetica, Arial,sans-serif;font-size:16px;">Create an account</center>
+                    </v:roundrect>
+                  <![endif]-->
+
+                  <!--[if !mso]><\!-->
+                  <a class="btn-dark" href="{{component.btnSolidLink}}" target="_blank" style="text-decoration: none;">
+                    <table class="btn-dark-wrapper" width="300" align="center" border="0" cellspacing="0" cellpadding="0" style="width: 300px;margin: 42px auto; margin-bottom:25px">
+                      <tbody>
+                        <tr>
+                          <td class="btn-dark" width="300" align="center" valign="middle" style="width:300px;text-align:center;background-color:#27c13f; padding: 14px 8px; border-radius:4px;word-wrap: break-word;">
+                            <font face="Helvetica, Arial,sans-serif" size="4" color="#ffffff">
+                              <a href="{{component.btnSolidLink}}" target="_blank" style="color:#ffffff; text-decoration: none;">
+                                Create an account
+                              </a>
+                            </font>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </a>
+                  <!-- <![endif]-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img class="payments" src="http://crm.quasargaming.com/2016/omar_test_images/paytments.png" alt="payments">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- help section -->
+      <tr>
+        <td>
+          <table class="help_content" cellpadding="0" cellspacing="0" width="100%" style="text-align: center; width: 100%;padding: 20px 0;padding-top: 40px;background: rgb(255,255,255);width: 580px;margin: auto;">
+            <tr>
+              <td style="padding: 19px 20px;background-color: #efefef;">
+                <font face="font-family: 'Segoe UI Light','Segoe UI','Helvetica Neue Medium',Arial,sans-serif;" color="#777777" size="4">Need Help?</font>
+                <p>
+                  <font face="font-family: 'Segoe UI','Segoe UI Regular',SUWR,Arial,Sans-Serif;" color="#818181" size="2">
+                    Do not hesitate to contact our professional and friendly customer support team on live chat or drop them an email on: 
+                    <a href="mailto:support@quasargaming.com" style="text-decoration: none;"><font color="#4d84e3">support@quasargaming.com</font></a>
+                  </font>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- credentials  -->  
+      <tr>
+        <td>
+          <table class="credentials_content" width="580px" style="text-align: center;padding: 20px 0;padding-top: 0; background: rgb(255,255,255);width: 580px;margin: auto;border-bottom-left-radius: 4px;border-bottom-right-radius: 4px;">
+            <tr>
+              <td>
+                <table cellpadding="0" cellspacing="0" width="auto" style="margin-left:auto; margin-right:auto; text-align: center;">
+                  <tr>
+                    <td style="padding: 0 5px; border-right:1px solid #9e9d9d;">
+                      <a href="#"><font color="#9e9d9d" size="1.5">unsubscribe</font></a>
+                    </td>
+                    <td style="padding: 0 5px">
+                      <a href="#"><font color="#9e9d9d" size="1.5">Terms & Conditions</font></a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <!-- footer --> 
+      <tr>
+        <td>
+          <table width="100%" style="text-align: center;padding: 30px 0;">
+            <tr>
+              <td>
+                <table align="center" style="text-align: center;padding: 9px 0;margin:auto">
+                  <tr>
+                    <td style="padding:0 9px;">
+                      <img src="http://crm.quasargaming.com/2016/omar_test_images/icon18%2B.png">
+                    </td>
+                    <td style="padding:0 9px;">
+                      <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-ytube.png">
+                    </td>
+                    <td style="padding:0 9px;">
+                      <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-fb.png">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <table align="center" style="text-align: center;margin:auto">
+                  <tr>
+                    <td style="padding:0 11px;">
+                      <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-mga.png">
+                    </td>
+                    <td style="padding:0 11px;">
+                      <img src="http://crm.quasargaming.com/2016/omar_test_images/icon-gpwa.png">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding:10px 20px; padding-bottom: 30px; text-align: center;">
+          <font color="#9a9a9a" size="2.5">
+            Quasar Limited is licensed and regulated by the Malta Gaming Authority (MGA) of Malta.
+            Licence: MGA/CL1/678/2010 issued on the 9th of September 2011.
+            Registered Address: 202/19 (Suite 1395), Old Bakery Street, Valletta, VLT1453. Malta
+          </font>
+          <br><br>
+          <font color="#9a9a9a" size="2.5">Quasar Gaming, All rights reserved 2016 ©, 
+            <a href="mailto:www.quasargaming.com" style="text-decoration: none;"><font color="#4d84e3" size="2.5">www.quasargaming.com</font></a>
+          </font>
+        </td>
+      </tr>
+    </table>
+
+          </div>
+
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
