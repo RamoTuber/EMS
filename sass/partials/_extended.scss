@@ -1,0 +1,53 @@
+.comp-selection {
+
+	position: relative;
+	border:1px solid transparent;
+	cursor:pointer;
+	
+	.isSelected {
+		position: absolute;
+	    z-index: 1004;
+	    right: 0;
+	    top: 0;
+	    border-radius: 1px;
+	    display: none;
+	    background: #00afff;
+	    width: 20px;
+	    height: 20px;
+	    text-align: center;
+	    color: #fff;
+	    font-weight: 700;
+	    font-size: 13px;
+	    line-height: 1.3;
+	}
+
+	&:hover {
+		border:1px solid #00afff;
+
+		.isSelected {
+			display:block;
+		}
+	}
+}
+
+/*script injected classes*/
+.activeThumb {
+	border:1px solid #00afff !important;
+
+	.isSelected {
+		display:block !important;
+	}
+}
+
+.activeComp {
+	border: 2px dashed #0091ff;
+	position: relative;
+	z-index:1004;
+	@include vendor-prefix(transform, scale(1.04));
+    box-shadow: 0 0 21px rgba(0,0,0,0.1);
+    opacity: 1 !important;
+}
+
+.active_link {
+	display:block !important;
+}

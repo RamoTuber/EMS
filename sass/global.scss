@@ -1,0 +1,17 @@
+/*Media Queries*/
+/*the respond-to function is used inside the class tag in the respective sass file*/
+@mixin respond-to($media) {
+  @if $media == smDesktop {
+    @media only screen and (max-width:1280px) {@content;}
+  }
+}
+
+/*including cendor prefixes*/
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in ('-webkit-', '-moz-', '-ms-', '-o-', '') {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+@import "partials/_extended.scss",
+		"partials/_components.scss";
